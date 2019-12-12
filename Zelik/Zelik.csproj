@@ -229,24 +229,34 @@
     <Compile Include="Migrations\201912101240042_AddDateOfBirth.Designer.cs">
       <DependentUpon>201912101240042_AddDateOfBirth.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912110745581_GenreAndMovieProperties.cs" />
+    <Compile Include="Migrations\201912110745581_GenreAndMovieProperties.Designer.cs">
+      <DependentUpon>201912110745581_GenreAndMovieProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912110800463_PopulateGenreTable.cs" />
+    <Compile Include="Migrations\201912110800463_PopulateGenreTable.Designer.cs">
+      <DependentUpon>201912110800463_PopulateGenreTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\NewCustomerViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -303,6 +313,7 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Customers\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -344,6 +355,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912101240042_AddDateOfBirth.resx">
       <DependentUpon>201912101240042_AddDateOfBirth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912110745581_GenreAndMovieProperties.resx">
+      <DependentUpon>201912110745581_GenreAndMovieProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912110800463_PopulateGenreTable.resx">
+      <DependentUpon>201912110800463_PopulateGenreTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
