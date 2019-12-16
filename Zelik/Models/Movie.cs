@@ -22,11 +22,10 @@ namespace Zelik.Models
         [Display(Name="Added Date")]
         public DateTime DateAdded { get; set; }
 
-        
         public Genre Genre { get; set; }
 
         [Display(Name ="Genre")]
-      
+        [Required]
         public byte GenreId { get; set; }
     }
 }
