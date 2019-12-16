@@ -12,6 +12,9 @@ namespace Zelik.Models
         public string Name { get; set; }
         public byte DurationInMonths { get; set; }
         public byte DiscountRate { get; set; }
-        
+
+        public static readonly byte Unkown = 0;
+        public static readonly byte PayAsYouGo = 1;
+
     }
 }
