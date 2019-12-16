@@ -17,6 +17,7 @@ namespace Zelik.Models
         public DateTime ReleasedDate { get; set; }
 
         [Display(Name="Number of Stock")]
+        [Range(1, 20)]
         public byte NumberInStock { get; set; }
 
         [Display(Name="Added Date")]
