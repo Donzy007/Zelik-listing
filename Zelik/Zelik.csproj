@@ -241,6 +241,10 @@
     <Compile Include="Migrations\201912132358455_InsertDateToDb.Designer.cs">
       <DependentUpon>201912132358455_InsertDateToDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912161712501_AddingMovieToDB.cs" />
+    <Compile Include="Migrations\201912161712501_AddingMovieToDB.Designer.cs">
+      <DependentUpon>201912161712501_AddingMovieToDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -370,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912132358455_InsertDateToDb.resx">
       <DependentUpon>201912132358455_InsertDateToDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912161712501_AddingMovieToDB.resx">
+      <DependentUpon>201912161712501_AddingMovieToDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
