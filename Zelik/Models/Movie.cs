@@ -11,6 +11,7 @@ namespace Zelik.Models
         public string Name { get; set; }
         public DateTime ReleasedDate { get; set; }
         public byte NumberInStock { get; set; }
+        //public DateTime DateAdded { get; set; }
         public Genre Genre { get; set; }
         public byte GenreId { get; set; }
     }
