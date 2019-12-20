@@ -9,12 +9,13 @@
     <p>We don't have any customer yet</p>
 }
 else {
-    <table class="table">
+    <table id="customers" class="table">
         <thead>
             <tr>
                 <th>Customers</th>
                 <th>Membership Type</th>
                 <th>Discount Rate</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -24,27 +25,31 @@ else {
                     <td>@Html.ActionLink(customer.Name, "Edit","Customers", new { id=customer.Id},null)</td>
                     <td>@customer.MembershipType.Name</td>
                     <td>@customer.MembershipType.DiscountRate %</td>
+                    <td>
+                        <button data-customer-id="@customer.Id" class="btn-link js-delete">Delete</button>
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
 }
-    @*@{
-        var className = Model.Customers.Count > 0 ? "popular" : null;
-    }
-
-    <h2 class="@className"> </h2>
-    @if (Model.Customers.Count == 0)
-    {
-        <p>No one has rented this movie before.</p>
-    }
-    else
-    {
-        <ul>
-            @foreach (var customer in Model.Customers)
-            {
-                <li>@customer.Name</li>
-            }
-        </ul>
-    }*@
+ @section scripts
+     {
+       <script>
+           $(document).ready(function () {
+               $("#customers .js-delete").on("click", function () {
+                   var button = $(this);
+                   if (confirm("Are you sure you want to delete customer?")) {
+                       $.ajax({
+                           url: "/api/customers/" + button.attr("data-customer-id"),
+                           method: "DELETE",
+                           success: function () {
+                               button.parents("tr").remove();
+                           }
+                       })
+                   }
+               })
+           });
+       </script>
+       }
 
