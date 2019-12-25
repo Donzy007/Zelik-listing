@@ -4,7 +4,7 @@
 }
 
 <h2>Customer</h2>
- <table id="customers" class="table">
+ <table id="customers" class="table table-bordered table-hover">
      <thead>
          <tr>
              <th>Customers</th>
@@ -21,7 +21,7 @@
      {
        <script>
            $(document).ready(function () {
-               $("#customers").DataTable({
+               var table = $("#customers").DataTable({
                    ajax: {
                        url: "/api/customers",
                        dataSrc:""
@@ -34,12 +34,12 @@
                            }
                        },
                        {
-                           data: "name"
+                           data: "membershipType.name"
                        },
                        {
                            data: "id",
                            render: function (data) {
-                               return "<button class='but-link je-delete' data-customer-id=" + data + "> Delete</button>";
+                               return "<button class='but-link js-delete' data-customer-id=" + data + "> Delete</button>";
 
                            }
                        }
@@ -54,7 +54,8 @@
                                url: "/api/customers/" + button.attr("data-customer-id"),
                                method: "DELETE",
                                success: function () {
-                                   button.parents("tr").remove();
+                                   table.row(button.parents("tr")).remove().draw();
+                                  
                                }
                            })
 
