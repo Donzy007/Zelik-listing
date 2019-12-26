@@ -65,6 +65,10 @@ namespace Zelik.Models
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name ="Driving Liecense")]
+        public string DrivingLiecense { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }

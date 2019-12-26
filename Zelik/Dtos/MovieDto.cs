@@ -15,6 +15,8 @@ namespace Zelik.Dtos
 
         public DateTime ReleasedDate { get; set; }
 
+        public GenreDto Genre { get; set; }
+
         [Range(1, 20)]
         public byte NumberInStock { get; set; }
 

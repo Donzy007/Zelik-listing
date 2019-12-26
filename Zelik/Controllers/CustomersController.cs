@@ -63,6 +63,7 @@ namespace Zelik.Controllers
             return RedirectToAction("Index", "Customers");
         }
         // GET: Customers
+        
         public ActionResult Index()
         {
             //var customers = _context.Customers.Include(c=>c.MembershipType).ToList();
