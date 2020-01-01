@@ -54,9 +54,9 @@ namespace Zelik
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "2587096631386722",
+               appSecret: "999a2534458f1cdd3470fd97ef2e8a20");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

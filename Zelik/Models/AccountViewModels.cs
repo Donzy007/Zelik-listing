@@ -8,6 +8,14 @@ namespace Zelik.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "Driving License")]
+        public string DrivingLiecense { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string Phone { get; set; }
     }
 
     public class ExternalLoginListViewModel
@@ -69,6 +77,10 @@ namespace Zelik.Models
         public string DrivingLiecense { get; set; }
 
         [Required]
+        [StringLength(50)]
+        public string Phone { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
@@ -83,6 +95,7 @@ namespace Zelik.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+                
     }
 
     public class ResetPasswordViewModel

@@ -154,7 +154,8 @@ namespace Zelik.Controllers
             {
                 var user = new ApplicationUser { UserName = model.Email,
                     Email = model.Email,
-                    DrivingLiecense = model.DrivingLiecense
+                    DrivingLiecense = model.DrivingLiecense,
+                    Phone = model.Phone
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
@@ -372,7 +373,10 @@ namespace Zelik.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email,
+                    Email = model.Email,
+                    DrivingLiecense = model.DrivingLiecense
+                };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
