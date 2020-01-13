@@ -16,6 +16,8 @@ namespace Zelik.Dtos
         public bool IsSubscribedToNewsletter { get; set; }
 
         public byte MembershipTypeId { get; set; }
+        
+        public MembershipTypeDto MembershipType { get; set; }
 
         [Display(Name = "Date of Birth")]
         //[Min18YearsIfAMember]
